@@ -28,6 +28,7 @@ jobs:
         uses: actions/upload-pages-artifact@v3
         with:
           path: ./dist
+          name: github-pages # Adiciona um nome ao artefato
 
   deploy:
     permissions:
@@ -42,5 +43,7 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v3
+        with:
+          artifact_name: github-pages # Referencia o nome do artefato
 
 
