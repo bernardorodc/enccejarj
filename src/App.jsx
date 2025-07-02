@@ -23,6 +23,9 @@ const UNIDADES_TURMAS = {
   'Casa Nails - Penha': [
     'CURSO: HUMANAS — SEG - QUA — 09:00 - 11:00 — Milena — Início: 08/07/2025',
     'CURSO: HUMANAS — QUA - SEX — 18:00 - 20:00 — Tânia Márcia — Início: 09/07/2025'
+  ],
+  'IGREJA BATISTA MANAIM – CAMPO GRANDE': [
+    'CURSO: LINGUAGENS — SEG-QUI — 19:30 - 22:30 — Diane Cristina — Início: 19/06/2025'
   ]
 };
 
