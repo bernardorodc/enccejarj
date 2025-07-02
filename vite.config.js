@@ -7,6 +7,15 @@ import path from 'path'
 export default defineConfig({
   base: '/',
   plugins: [react(),tailwindcss()],
+  build: {
+    rollupOptions: {
+      output: {
+        entryFileNames: `[name].js`,
+        chunkFileNames: `[name].js`,
+        assetFileNames: `[name].[ext]`
+      }
+    }
+  },
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
