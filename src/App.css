@@ -1,0 +1,168 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Estilos customizados para o formulário ENCCEJA */
+
+.container {
+  max-width: 80rem;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Animações para transições suaves */
+.fade-in {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Estilo para o logo da Prefeitura */
+.logo-prefeitura {
+  background: linear-gradient(135deg, #1e3a8a 0%, #0ea5e9 100%);
+}
+
+/* Progress bar customizada */
+.progress-bar {
+  background-color: #e5e7eb;
+  border-radius: 9999px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  background: linear-gradient(to right, #06b6d4, #3b82f6);
+  height: 100%;
+  transition: all 0.5s ease-out;
+}
+
+/* Cards com sombra suave */
+.card-shadow {
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  transition: box-shadow 0.3s ease;
+}
+
+.card-shadow:hover {
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+/* Texto gradiente para títulos especiais */
+.text-gradient {
+  background: linear-gradient(135deg, #1e3a8a 0%, #0ea5e9 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Animação para o popup de pontuação */
+.popup-enter {
+  animation: popupEnter 0.3s ease-out;
+}
+
+@keyframes popupEnter {
+  from {
+    opacity: 0;
+    transform: scale(0.8) translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+/* Estilo para badges de pontuação */
+.badge-points {
+  background: linear-gradient(to right, #fbbf24, #f59e0b);
+  color: white;
+  font-weight: bold;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.875rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsividade melhorada */
+@media (max-width: 640px) {
+  .container {
+    padding: 0 1rem;
+  }
+  
+  .card-content {
+    padding: 1rem;
+  }
+  
+  .text-responsive {
+    font-size: 1.5rem;
+  }
+}
+
+/* Estilo para elementos de gamificação */
+.gamification-element {
+  background: linear-gradient(to right, #a855f7, #ec4899);
+  color: white;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+/* Contador de vagas com pulsação */
+.vagas-counter {
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+}
+
+/* Estilo para o ranking social */
+.ranking-highlight {
+  background: linear-gradient(to right, #fef3c7, #fed7aa);
+  border-left: 4px solid #f59e0b;
+  padding: 0.75rem;
+  border-radius: 0 0.5rem 0.5rem 0;
+}
+
+/* Transições suaves para mudança de etapas */
+.step-transition {
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Estilo para ícones de conquista */
+.achievement-icon {
+  width: 2rem;
+  height: 2rem;
+  color: #eab308;
+  filter: drop-shadow(0 4px 3px rgba(0, 0, 0, 0.07));
+}
+
+/* Botão de finalização especial */
+.btn-finish {
+  background: linear-gradient(to right, #10b981, #059669);
+  color: white;
+  font-weight: bold;
+  padding: 1rem 2rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  transform: scale(1);
+}
+
+.btn-finish:hover {
+  background: linear-gradient(to right, #059669, #047857);
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  transform: scale(1.05);
+}
+
