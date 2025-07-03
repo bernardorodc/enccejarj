@@ -9,7 +9,7 @@ jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
     permissions:
-      contents: write # Adiciona permissão de escrita para o GITHUB_TOKEN
+      contents: write
 
     steps:
       - name: Checkout
@@ -26,12 +26,15 @@ jobs:
       - name: Build
         run: npm run build
 
+      - name: Add .nojekyll file
+        run: touch ./dist/.nojekyll
+
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./dist
           cname: enccejarj.com.br
-          force_orphan: true # Força um deploy limpo, removendo arquivos antigos
+          force_orphan: true
 
 
